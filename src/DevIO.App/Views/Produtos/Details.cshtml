@@ -1,0 +1,54 @@
+﻿@model DevIO.App.ViewModels.ProdutoViewModel
+
+@{
+    ViewData["Title"] = "Detalhes sobre " + Model.Nome;
+}
+
+<div class="d-flex justify-content-between">
+    <h1>@ViewData["Title"]</h1>
+    <div class="my-auto">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+        <a href="javascript: window.history.back();" class="btn btn-secondary">Voltar</a>
+    </div>
+</div>
+<hr />
+
+<div>
+    <dl class="row">
+        <div class="col-md-3">
+            <img src="~/imagens/@Model.Imagem" class="img-fluid w-100" />
+        </div>
+        <div class="col-md-9">
+            <dt class="">
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+            <dd class="">
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+            <dt class="">
+                @Html.DisplayNameFor(model => model.Descricao)
+            </dt>
+            <dd class="">
+                @Html.DisplayFor(model => model.Descricao)
+            </dd>
+            <dt class="">
+                @Html.DisplayNameFor(model => model.Valor)
+            </dt>
+            <dd class="">
+                @Model.Valor.ToString("C")
+            </dd>
+            <dt class="">
+                @Html.DisplayNameFor(model => model.Ativo)
+            </dt>
+            <dd class="">
+                @Html.DisplayFor(model => model.Ativo)
+            </dd>
+            <dt class="">
+                @Html.DisplayNameFor(model => model.Fornecedor)
+            </dt>
+            <dd class="">
+                @Html.DisplayFor(model => model.Fornecedor.Nome)
+            </dd>
+        </div>
+    </dl>
+</div>

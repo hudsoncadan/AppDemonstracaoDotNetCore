@@ -1,0 +1,85 @@
+﻿@model DevIO.App.ViewModels.FornecedorViewModel
+
+@{
+    ViewData["Title"] = "Editar " + Model.Nome;
+}
+
+<form asp-action="Edit">
+    <div class="d-flex justify-content-between">
+        <h1>@ViewData["Title"]</h1>
+
+        <div class="my-auto">
+            <input type="submit" value="Atualizar" class="btn btn-success" />
+            <a asp-action="Index" class="btn btn-primary">Exibir listagem de Fornecedores</a>
+            <a href="javascript: window.history.back();" class="btn btn-secondary">Voltar</a>
+        </div>
+    </div>
+    <hr />
+
+    <vc:Summary></vc:Summary>
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="row">
+        <div class="col-md-1">
+            <label asp-for="TipoFornecedor" class="control-label"></label>
+        </div>
+        <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+                <input id="pessoaFisica" type="radio" value="1" asp-for="TipoFornecedor" checked="@(Model.TipoFornecedor == 1)" class="form-check-input">
+                <label for="pessoaFisica" class="form-check-label">Pessoa Física</label>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+                <input id="pessoaJuridica" type="radio" value="2" asp-for="TipoFornecedor" checked="@(Model.TipoFornecedor == 2)" class="form-check-input">
+                <label for="pessoaJuridica" class="form-check-label">Pessoa Jurídica</label>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="custom-control custom-checkbox">
+                <input class="custom-control-input" asp-for="Ativo" id="ativo" />
+                <label class="custom-control-label" for="ativo">@Html.DisplayNameFor(model => model.Ativo)</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-md-6">
+            <label asp-for="Nome" class="control-label"></label>
+            <input asp-for="Nome" class="form-control" />
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-md-6">
+            <label asp-for="Documento" class="control-label"></label>
+            <input asp-for="Documento" class="form-control" />
+            <span asp-validation-for="Documento" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+        </div>
+    </div>
+</form>
+
+<div id="EnderecoTarget">
+    <partial name="_EnderecoDetailsTable" />
+</div>
+
+<div>
+    <h4>Produtos</h4>
+    <partial name="../Produtos/_ListaProdutos" model="@Model.Produtos" />
+</div>
+
+<partial name="_Modal" />
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function () {
+            AddModalConfig();
+        });
+    </script>
+}

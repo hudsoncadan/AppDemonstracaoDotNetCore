@@ -1,0 +1,175 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h2 class="display-4">.Net Core 3.1</h2>
+
+    <div class="alert alert-info pt-3 pb-1" role="alert">
+        <p>Para acessar o sistema, utilize o login abaixo.<br />
+        <small>O seguinte login já possui as permissões definidas para melhor navegação.</small>
+        </p>
+        <p>
+            <strong>Email: </strong>teste@teste.com.br<br />
+            <strong>Password: </strong>Senha@123
+        </p>
+    </div>
+
+    <div class="row">
+        @*User Interface*@
+        <div class="col-md-4">
+            <div class="list-group text-left shadow">
+                <div class="list-group-item list-group-item-action active">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">User Interface</h5>
+                    </div>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Areas</h5>
+                    </div>
+                    <p class="mb-1">Área MVC definida para o Identity.</p>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">AutoMapper</h5>
+                    </div>
+                    <p class="mb-1">Configração do AutoMapper para Models e ViewModels.</p>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Configurations</h5>
+                    </div>
+                    <p class="mb-1">Classes de extensões para Startup.cs.</p>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Controllers</h5>
+                    </div>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Data</h5>
+                    </div>
+                    <p class="mb-1">Context para o Identity.</p>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Extensions</h5>
+                    </div>
+                    <p class="mb-1">Classes de Extensões, Atributos e TagHelpers para auxiliar e facilitar o desenvolvimento.</p>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">ViewComponents</h5>
+                    </div>
+                    <p class="mb-1">Summary ViewComponent com a apresentação dos erros da Camada de Business.</p>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">ViewModels</h5>
+                    </div>
+                    <p class="mb-1">Models das Entidades com devidas propriedades selecionadas para as Views.</p>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Views</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*Business*@
+        <div class="col-md-4">
+            <div class="list-group text-left shadow">
+                <div class="list-group-item list-group-item-action flex-column align-items-start active">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Business</h5>
+                    </div>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Interfaces</h5>
+                    </div>
+                    <p class="mb-1">Definição das Interfaces para Repository, Services e Notificator</p>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Models</h5>
+                    </div>
+                    <p class="mb-1">Modelagem das Entidades para o banco de dados.</p>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Notifications</h5>
+                    </div>
+                    <p class="mb-1">Central de Notificações da Camada de Negócios para a Camada de Apresentação.</p>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Services</h5>
+                    </div>
+                    <p class="mb-1">Implementação das Regras de Negócios, com foco em operações que modificam Entidades na base de dados, como Gravar, Atualizar e Excluir.</p>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Validations</h5>
+                    </div>
+                    <p class="mb-1">Implementação de Validações de Regras de Negócios através do package FluentValidation.</p>
+                </div>
+            </div>
+        </div>
+        @*Data*@
+        <div class="col-md-4">
+            <div class="list-group text-left shadow">
+                <div class="list-group-item list-group-item-action flex-column align-items-start active">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Data</h5>
+                    </div>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Context</h5>
+                    </div>
+                    <p class="mb-1">Declaração dos DbSets e OnModelCreating.</p>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Mappings</h5>
+                    </div>
+                    <p class="mb-1">Entidades mapeadas para o banco de dados através da Fluent API.</p>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Migrations</h5>
+                    </div>
+                    <p class="mb-1">Migrações para a base de dados.</p>
+                </div>
+
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Repository</h5>
+                    </div>
+                    <p class="mb-1">Implementação da interface de Repository.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

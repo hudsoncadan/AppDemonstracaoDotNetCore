@@ -1,0 +1,63 @@
+﻿@model DevIO.App.ViewModels.FornecedorViewModel
+
+@{
+    ViewData["Title"] = "Novo Fornecedor";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+<form asp-action="Create">
+    <vc:Summary></vc:Summary>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Documento" class="control-label"></label>
+                <input asp-for="Documento" class="form-control" />
+                <span asp-validation-for="Documento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoFornecedor" class="control-label"></label><br />
+                <div class="form-check">
+                    <input asp-for="TipoFornecedor" value="1" class="form-check-input" type="radio" id="pessoaFisica" checked>
+                    <label class="form-check-label" for="pessoaFisica">
+                        Pessoa Física
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input asp-for="TipoFornecedor" value="2" class="form-check-input" type="radio" id="pessoaJuridica">
+                    <label class="form-check-label" for="pessoaJuridica">
+                        Pessoa Jurídica
+                    </label>
+                </div>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Ativo" /> @Html.DisplayNameFor(model => model.Ativo)
+                </label>
+            </div>
+
+            <h4>Endereço</h4>
+            <hr />
+            <partial name="_EnderecoForm" />
+
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        AddBuscaCepConfig();
+    </script>
+}
