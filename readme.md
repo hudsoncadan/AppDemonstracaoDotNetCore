@@ -21,7 +21,6 @@ Projeto focado em facilitar a manutenção e inclusão de novas funcionalidades.
 ## Estrutura
 A Solução está estruturada em três Projetos: __UI__, __Business__ e __Data__.
   - O código fonte está disponível na pasta *src*.
-  - Um resumo da estrutura do projeto está disponível em [AppDemonstracao](http://appdemonstracao.us-east-1.elasticbeanstalk.com/).
 
 ## Exemplos de Código
 - SummaryViewComponent
