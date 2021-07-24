@@ -1,9 +1,6 @@
 # App MVC Demonstração .Net Core 3.1
 App MVC .Net Core 3.1  para o curso "Dominando o ASP.NET MVC Core" de [Desenvolvedor.IO](https://desenvolvedor.io/).
 
-## Acesso
-App Demonstração disponível em [AppDemonstracao](http://appdemonstracao.us-east-1.elasticbeanstalk.com/).
-
 ## Objetivos e Funcionalidades
 Projeto focado em facilitar a manutenção e inclusão de novas funcionalidades.
 
